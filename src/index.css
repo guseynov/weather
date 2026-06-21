@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Sora:wght@600;700&display=swap");
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    min-height: 100%;
+    background: #eff4ff;
+  }
+
+  body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Instrument Sans", system-ui, sans-serif;
+    color: #17304a;
+    background:
+      radial-gradient(circle at 18% 18%, rgba(255, 198, 221, 0.82), transparent 24rem),
+      radial-gradient(circle at 82% 16%, rgba(176, 231, 255, 0.8), transparent 26rem),
+      radial-gradient(circle at 50% 78%, rgba(226, 215, 255, 0.92), transparent 28rem),
+      linear-gradient(180deg, #fff7ef 0%, #f4f1ff 52%, #d9ecff 100%);
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.18;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.95' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+    mix-blend-mode: soft-light;
+  }
+
+  button,
+  input {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  #root {
+    min-height: 100vh;
+  }
+
+  .search-scrollbar {
+    scrollbar-color: rgba(87, 117, 165, 0.44) rgba(255, 255, 255, 0.22);
+    scrollbar-width: thin;
+  }
+
+  .search-scrollbar::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .search-scrollbar::-webkit-scrollbar-track {
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.18);
+  }
+
+  .search-scrollbar::-webkit-scrollbar-thumb {
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    border-radius: 999px;
+    background: linear-gradient(180deg, rgba(110, 142, 193, 0.92), rgba(74, 104, 160, 0.92));
+  }
+
+  .search-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(94, 131, 192, 0.98), rgba(59, 93, 152, 0.98));
+  }
+}

@@ -1,56 +1,39 @@
 # Weather
 
-A fast, city-search weather app built with React and Vite.
+A city-search weather app built with React, Vite, Tailwind CSS, TanStack Query, Floating UI, and the Temporal polyfill.
 
 ## What It Does
 
-- Search for a city by name
-- Choose from live location suggestions
-- View a five-day forecast at a glance
-- See hourly highlights, daily highs and lows, and weather condition labels
+- Search for a city with live suggestions
+- Select a location to load a five-day forecast
+- View daily cards with high/low temperatures and hourly highlights
+- Go back to search without losing the app flow
+
+## Data Sources
+
+- Open-Meteo geocoding API for city search
+- Open-Meteo forecast API for weather data
+
+No API key is required.
 
 ## Tech Stack
 
 - React 18
-- Vite
-- Open-Meteo geocoding and forecast APIs
-
-## Getting Started
-
-### Install dependencies
-
-```bash
-npm install
-```
-
-### Run locally
-
-```bash
-npm run dev
-```
-
-Then open the local URL shown in the terminal.
-
-### Build for production
-
-```bash
-npm run build
-```
-
-### Preview the production build
-
-```bash
-npm run preview
-```
+- Vite 5
+- Tailwind CSS 4
+- TanStack Query
+- Floating UI
+- `@js-temporal/polyfill`
+- `lucide-react`
 
 ## Scripts
 
-- `npm run dev` starts the Vite development server
-- `npm run build` creates an optimized production build
+- `npm run dev` starts the Vite dev server
+- `npm run build` creates a production build
 - `npm run preview` serves the production build locally
 
 ## Notes
 
-- No API key is required.
-- The app fetches city suggestions from Open-Meteo’s geocoding API and forecast data from Open-Meteo’s forecast API.
-
+- The app uses `latitude` and `longitude` to fetch forecasts.
+- UI state is split across dedicated components under `src/components`.
+- Time formatting uses Temporal instead of `Date`.
